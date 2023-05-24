@@ -6,9 +6,22 @@ package com.mona.fastcamp;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
+
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    @DisplayName("메인 - 리스트 정렬하기")
+    @Test
+    void sort() {
+        // given        
+        String[] args = {"3", "2", "1", "5", "4"};
+
+        // when & then
+        App.main(args);
+    }
+
 }
