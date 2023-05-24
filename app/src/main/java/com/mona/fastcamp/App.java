@@ -3,6 +3,11 @@
  */
 package com.mona.fastcamp;
 
+import java.util.Arrays;
+import java.util.List;
+
+import com.mona.fastcamp.logic.BubbleSort;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +15,11 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        BubbleSort<String> logic = new BubbleSort<>();
+
+        List<String> sorted = logic.sort(Arrays.asList(args));
+
+        System.out.println("result=" + sorted);
     }
 }
